@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 import { inspectAttr } from "kimi-plugin-inspect-react"
 
 export default defineConfig({
-  base: '/website/',   // 👈 REQUIRED for GitHub Pages
+  base: '/',   // 👈 REQUIRED for GitHub Pages
   plugins: [inspectAttr(), react()],
   resolve: {
     alias: {
