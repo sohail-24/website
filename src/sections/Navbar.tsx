@@ -74,7 +74,7 @@ export default function Navbar() {
               onClick={() => scrollToSection('#contact')}
               className="btn-primary text-sm"
             >
-              Let&apos;s Talk
+              Email Me
             </button>
           </div>
 
@@ -115,7 +115,7 @@ export default function Navbar() {
             onClick={() => scrollToSection('#contact')}
             className="btn-primary w-full text-sm mt-4"
           >
-            Let&apos;s Talk
+            Email Me
           </button>
         </div>
       </div>
