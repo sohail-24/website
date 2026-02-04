@@ -67,15 +67,16 @@ export default function Navbar() {
               </button>
             ))}
           </div>
-
+          
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="btn-primary text-sm"
-            >
+            <a
+              href="mailto:mdsohail88008@gmail.com"
+              className="btn-primary text-sm inline-flex items-center justify-center"
+            > 
               Email Me
-            </button>
+            </a>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,12 +112,13 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <button
-            onClick={() => scrollToSection('#contact')}
-            className="btn-primary w-full text-sm mt-4"
-          >
+          <a
+            href="mailto:mdsohail88008@gmail.com"
+            className="btn-primary w-full text-sm mt-4 inline-flex items-center justify-center"
+          > 
             Email Me
-          </button>
+          </a>
+
         </div>
       </div>
     </nav>
