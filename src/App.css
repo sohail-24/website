@@ -1,0 +1,44 @@
+/* App-specific styles */
+
+/* Ensure smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main app container */
+#root {
+  min-height: 100vh;
+}
+
+/* Section transitions */
+section {
+  position: relative;
+}
+
+/* Ensure proper z-index stacking */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix for mobile viewport height */
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* GPU acceleration for animated elements */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
