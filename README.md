@@ -1,73 +1,256 @@
-# React + TypeScript + Vite
+# 🚀 Personal Website Template – React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is a ready-to-use **React + TypeScript + Vite** website template.
 
-Currently, two official plugins are available:
+Anyone can clone this repository and deploy their own website using **GitHub Pages + GitHub Actions (CI/CD)**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 🌍 Live Example
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+If deployed correctly, your site will be available at:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+https://your-username.github.io/website/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Or using custom domain if configured.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 📦 Tech Stack
+
+* ⚛️ React
+* 🟦 TypeScript
+* ⚡ Vite
+* 🎨 Tailwind CSS
+* 🚀 GitHub Pages
+* 🔁 GitHub Actions (CI/CD)
+
+---
+
+# 🛠 Step 1 – Fork or Clone This Repository
+
+## Option A – Fork (Recommended)
+
+1. Click **Fork** (top-right of this repository)
+2. It will create a copy in your GitHub account
+
+## Option B – Clone Directly
+
+```bash
+git clone https://github.com/sohail-24/website.git
+cd website
 ```
+
+---
+
+# 💻 Step 2 – Install Dependencies
+
+Make sure you have **Node.js 18+ installed**
+
+Check version:
+
+```bash
+node -v
+```
+
+Then install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+# ▶️ Step 3 – Run Locally (Development Mode)
+
+```bash
+npm run dev
+```
+
+Open browser:
+
+```
+http://localhost:5173
+```
+
+Now modify:
+
+```
+src/
+```
+
+You can edit:
+
+* Navbar
+* Hero section
+* Projects
+* Contact
+* Styling (Tailwind)
+
+---
+
+# 🏗 Step 4 – Build Production Version
+
+When your website is ready:
+
+```bash
+npm run build
+```
+
+This creates:
+
+```
+dist/
+```
+
+This folder contains optimized production files.
+
+---
+
+# 🚀 Step 5 – Deploy to GitHub Pages (Automatic CI/CD)
+
+This repository already includes:
+
+```
+.github/workflows/deploy.yml
+```
+
+That means:
+
+✅ Every push to `main` branch
+✅ Automatically builds
+✅ Automatically deploys to GitHub Pages
+
+---
+
+## Enable GitHub Pages
+
+1. Go to your repository
+2. Click **Settings**
+3. Click **Pages**
+4. Under **Source**, select:
+
+```
+GitHub Actions
+```
+
+That’s it.
+
+Now push code:
+
+```bash
+git add .
+git commit -m "deploy website"
+git push origin main
+```
+
+GitHub will:
+
+* Install dependencies
+* Build project
+* Deploy to GitHub Pages
+
+You can check deployment in:
+
+```
+Actions → Deploy workflow
+```
+
+---
+
+# 🌐 Step 6 – Access Your Live Website
+
+Your website will be available at:
+
+```
+https://your-username.github.io/website/
+```
+
+⚠️ Replace `your-username` with your GitHub username.
+
+---
+
+# 🌍 Optional – Custom Domain Setup
+
+If you own a domain:
+
+1. Go to **Settings → Pages**
+2. Add your custom domain
+3. Enable **Enforce HTTPS**
+4. Configure DNS:
+
+   * Add CNAME record pointing to:
+
+     ```
+     your-username.github.io
+     ```
+
+---
+
+# 🧹 Recommended Improvements (Best Practice)
+
+* Do NOT push `node_modules`
+* Add `.gitignore`
+* Keep only source files
+* Let GitHub Actions build automatically
+* Treat this like a production CI/CD pipeline
+
+---
+
+# 📁 Project Structure
+
+```
+website/
+ ├── .github/workflows/deploy.yml
+ ├── src/
+ ├── public/
+ ├── index.html
+ ├── package.json
+ ├── vite.config.ts
+ └── dist/ (generated after build)
+```
+
+---
+
+# 🧠 DevOps Mindset
+
+This project demonstrates:
+
+* Frontend development
+* Automated CI/CD
+* Production deployment
+* Infrastructure-free hosting
+* GitHub Actions pipeline
+
+---
+
+# 🤝 Contributing
+
+You can modify this template and build:
+
+* Portfolio site
+* Resume website
+* Startup landing page
+* DevOps dashboard
+* Project showcase
+
+---
+
+# 📜 License
+
+Free to use and modify.
+
+---
+
+# 👨‍💻 Author
+
+Mohammed Sohail
+DevOps Engineer
+
+---
+
+⭐ If this project helped you, consider starring the repository.
+
+Happy Building 🚀
